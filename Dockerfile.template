@@ -1,0 +1,10 @@
+FROM resin/raspberrypi3-debian:latest
+
+
+RUN apt-get update
+RUN apt-get install -y git
+RUN git clone https://github.com/urlgrey/hsmm-pi.git
+RUN cd hsmm-pi
+RUN sh install.sh
+
+ENV INITSYSTEM on
